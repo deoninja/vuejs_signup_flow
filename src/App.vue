@@ -1,10 +1,10 @@
 <template>
   <div id="app">
+    <StepsIndicator />
     <div class="container">
-      <StepsIndicator />
       <div class="content">
-        <SignUpForm />
-        <MarketingContainer />
+        <SignUpForm class="column left" />
+        <MarketingContainer class="column right" />
       </div>
       <PhoneNumberComponent />
     </div>
@@ -40,9 +40,9 @@
     .container {
       max-width: 1280px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
 
       .content {
         display: flex;
@@ -55,5 +55,27 @@
         }
       }
     }
+    .content {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100vh;
+            margin-top: 10em;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 2em;
+        }
+
+        .left {
+            background-color: #f0f0f0;
+        }
+
+        .right {
+            background-color:@light-yellow;
+        }
   }
 </style>
